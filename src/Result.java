@@ -312,7 +312,6 @@ public class Result {
 			}
 			else if(type == CA)
 			{
-
 				string = string.concat(String.format("%d\n",CA_current[i]));
 			}
 
@@ -384,6 +383,10 @@ public class Result {
 					voltage += inc;
 				else
 					voltage -= inc;
+            }
+            else if (type==CA)
+            {
+				string = string.concat(String.format("%d\n",CA_current[i]));
             }
 			else if(type == ACV)
 			{
