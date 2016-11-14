@@ -10,6 +10,12 @@ import java.awt.BorderLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+// WBD
+// ------------------------------
+import java.awt.GridLayout;
+import javax.swing.SpringLayout;
+// ------------------------------
+
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.KeyStroke;
@@ -174,6 +180,9 @@ public class ElectrodeSense {
             nameLabel.setBounds(new Rectangle(10, 40, 100, 20));
             nameLabel.setText("Profile Name:");
             nameLabel.setVisible(false);
+
+            // WBD
+            // ------------------------------------------------
             jContentPane = new JPanel();
             jContentPane.setLayout(null);
             jContentPane.add(getUploadButton(), null);
@@ -201,6 +210,8 @@ public class ElectrodeSense {
             jContentPane.add(getPortComboBox(), null);
             jContentPane.add(getStatusField(), null);
             jContentPane.add(getGraph(), null);
+            // ---------------------------------------------
+
         }
         return jContentPane;
     }
@@ -493,13 +504,14 @@ public class ElectrodeSense {
         }
         return downloadButton;
     }
-
+    
     /**
      * This method initializes fileButton	
      * 	
      * @return javax.swing.JButton	
      */
-    private JButton getFileButton() {
+    //private JButton getFileButton() {
+    private JButton getClipboardButton() {
         if (fileButton == null) {
             fileButton = new JButton();
             fileButton.setBounds(new Rectangle(330, 320, 90, 20));
@@ -941,7 +953,8 @@ public class ElectrodeSense {
      * 	
      * @return javax.swing.JButton	
      */
-    private JButton getClipboardButton() {
+    //private JButton getClipboardButton() {
+    private JButton getFileButton() {
         if (clipboardButton == null) {
             clipboardButton = new JButton();
             clipboardButton.setBounds(new Rectangle(228, 320, 90, 20));

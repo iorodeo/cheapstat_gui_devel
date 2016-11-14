@@ -327,14 +327,12 @@ public class Result {
     {
         File file = new File("output.txt");
         JFileChooser save = new JFileChooser();
-        try {
-            //FileSaveAction.setCurrentDirectory(new java.io.File("").getAbsoluteFile());
-            save.showSaveDialog(null);
-            file = save.getSelectedFile();
-        } catch (java.awt.HeadlessException e1) {
-            e1.printStackTrace();
+        int status = save.showSaveDialog(null);
+        if (status != JFileChooser.APPROVE_OPTION)
+        {
+            return;
         }
-
+        file = save.getSelectedFile();
         String string = new String();
 
         double voltage = op2;

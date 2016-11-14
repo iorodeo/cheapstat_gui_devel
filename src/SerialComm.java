@@ -138,6 +138,8 @@ public class SerialComm
             try
             {
                 type = (short) in.read();
+                System.out.println(type);
+
                 if(type == SWV || type == CV || type == ACV || type == LSV || type == CA)
                 {
                     System.out.println("Getting results for: " + type);
